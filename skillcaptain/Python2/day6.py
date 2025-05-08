@@ -4,7 +4,7 @@ import string
 
 user_input = int(input("Enter the number of names"))
 letters = list(string.ascii_lowercase)
-file = open("/home/ekta/skillcaptain/datas/python2_day6.txt", 'w' )
+file = open("skillcaptain/datas/python2_day6.txt", 'w' )
 
 vowels =['a','e','i','o','u']
 syllables = []
