@@ -3,7 +3,7 @@ class Product :
         self. name = name
         self.price =price
         self.quantity =quantity
-    def getProductInfo():
+    def getProductInfo(self):
         print(self.name)
         print(self.price)
         print(self.quantity)

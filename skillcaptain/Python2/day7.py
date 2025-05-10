@@ -14,7 +14,7 @@ class User :
         self.password = password
         self.email = email
 
-    def getUserInfo():
+    def getUserInfo(self):
         print(self.name)
 
 def userRegistration(name, email, password):

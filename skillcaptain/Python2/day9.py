@@ -4,6 +4,9 @@
 # 4. The "add_to_cart" method should take a "Product" object as a parameter and add it to the cart's list of products.
 # 5. The "remove_from_cart" method should take a product name as a parameter and remove the corresponding product from the cart.
 # 6. The "display_cart" method should display the products in the cart along with their details.
+
+
+
 class Product :
     def __init__ (self, productName ,price ,Quantity):
         self.productName =productName
@@ -36,6 +39,7 @@ cart.add_to_cart(p1)
 cart.add_to_cart(p2)
 cart.display_cart()
 cart.remove_from_cart("pencil")
+
 
 
 
