@@ -1,0 +1,15 @@
+Write a SQL query to display the total number of employees in each department, 
+sorted by the department with the highest number of employees first,
+and only show departments with more than 2 employees.
+
+CREATE TABLE Employees (
+  ID INT,
+  Name VARCHAR(255),
+  Department VARCHAR(255)
+);
+insert into Employees (name , Department)
+values ('ram' ,'eng'),('shyam','eng'),('nitish','infra'),('lakshmi','infra'), ('gauri','infra'),('')
+select from Employees sum(Department)
+group by Department
+having Department > 2
+order by Department Desc ;

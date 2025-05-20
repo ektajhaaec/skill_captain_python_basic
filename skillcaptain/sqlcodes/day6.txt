@@ -1,0 +1,18 @@
+create database myDatabase
+use myDatabase
+create table Employees (
+id int primary key auto_increment ,
+name varchar(50),
+email varchar(50),
+dob date ,
+salary decimal(10,2),
+isactive boolean
+);
+
+insert into Employees (name ,email ,dob, salary , isactive)
+values ('ekta', 'ekta@gmail.com','eng', '1998-06-13' , 100, true),
+('puchka','puchka@gmail.com','ceo', '2024-05-10' , 100, true);
+
+
+truncate table Employees
+drop table  Employees
