@@ -1,0 +1,12 @@
+create table department (departmentid int primary key, departmentname varchar(255));
+create table employee (employeeid int primary key, employeename varchar(255), departmentid int);
+insert into department (departmentid, departmentname) values (1, 'hr'), (2, 'eng'), (3, 'infra'), (4, 'sales');
+insert into employee (employeeid, employeename, departmentid) values (101, 'ekta', 1), (102, 'motu', 2), (103, 'patlu', 4), (104, 'puchka', 4), (105, 'pikachu', 3);
+select employee.employeename, department.departmentname from employee cross join department;
+select employee.employeeid, employee.employeename, department.departmentname from employee inner join department on employee.departmentid = department.departmentid;
+select employee.employeename, department.departmentname from employee left join department on employee.departmentid = department.departmentid union select employee.employeename, department.departmentname from employee right join department on employee.departmentid = department.departmentid;
+select employee.employeeid, employee.employeename, department.departmentname from employee left join department on employee.departmentid = department.departmentid;
+select department.departmentid, department.departmentname, employee.employeename from department left join employee on employee.departmentid = department.departmentid;
+select employee.employeeid, employee.employeename from employee left join department on employee.departmentid = department.departmentid where department.departmentid is null;
+select department.departmentid, department.departmentname from department left join employee on department.departmentid = employee.departmentid where employee.employeeid is null;
+
